@@ -1,0 +1,29 @@
+{
+	"title": "Summary",
+	"plugins" : [
+		"expandable-chapters",
+		"copy-code-button",
+		"page-footer-ex",
+		"anchor-navigation-ex",
+		"expandable-chapters-small",
+		"prism", 
+		"-highlight",
+		"-lunr", 
+		"-search", 
+		"search-pro",
+		"splitter"
+	],
+	"pluginsConfig": {	
+		"page-footer-ex": {
+            "copyright": "使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
+            "markdown": true,
+            "update_label": "<i>updated</i>",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
+		},	
+		"prism": {
+			"css": ["prismjs/themes/prism-solarizedlight.css"],
+			"lang": {"flow": "typescript"}
+		}
+	},
+	"ignores" : ["_book", "node_modules"]
+}

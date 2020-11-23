@@ -1,0 +1,3 @@
+本节中介绍了Markdown、PicGo以及Typora。
+
+其中，Markdown是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者[HTML）文档；PicGo是一款图床工具，能便捷的将本地图片上传至Github、Gitee等；Typora是一款轻量级的Markdown编辑器。
