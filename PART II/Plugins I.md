@@ -156,7 +156,7 @@
 }
 ```
 
-## ​[splitter](https://github.com/yoshidax/gitbook-plugin-splitter)
+## [splitter](https://github.com/yoshidax/gitbook-plugin-splitter)
 
 左侧拖拽栏
 
@@ -166,6 +166,38 @@
 }
 ```
 
+## [gitbook-plugin-advanced-emoji](https://github.com/codeclou/gitbook-plugin-advanced-emoji)
 
+支持显示markdown文件中的emoji
+
+`:artificial_satellite:`  =>   :artificial_satellite:
+
+```json
+{
+    "plugins" : ["advanced-emoji"]
+}
+```
+
+## [gitbook-plugin-katex-ng](https://github.com/vowstar/gitbook-plugin-katex-ng)
+
+支持显示latex公式
+
+`$\int_{-\infty}^\infty g(x) dx$` => $\int_{-\infty}^\infty g(x) dx$
+
+```
+$$
+\int_{-\infty}^\infty g(x) dx
+$$
+```
+=>
+$$
+\int_{-\infty}^\infty g(x) dx
+$$
+
+```json
+{
+  "plugins": ["katex-ng"]
+}
+```
 
 and so on

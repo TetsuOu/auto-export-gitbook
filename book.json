@@ -1,5 +1,11 @@
 {
 	"title": "Summary",
+	"links": {
+        "sidebar": {
+            "Home": "https://wangzhebufangqi.github.io"
+        }
+    },
+	"author":"wangzhebufangqi",
 	"plugins" : [
 		"expandable-chapters",
 		"copy-code-button",

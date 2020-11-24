@@ -12,7 +12,7 @@
 
 ## 将token保存至仓库中的Secrets
 
-进入仓库，点击`Settings -> Secrets -> New repository secret`。将上一步得到的值保存为`TOKEN`，点击`Add secret`。以便Github Actions能利用这个值，使得其有权限向你的仓库push。
+进入仓库，点击`Settings -> Secrets -> New repository secret`。将上一步得到的值保存为`TOKEN`，点击`Add secret`。以便Github Actions能利用这个值，使得其有权限向你的仓库push。(同一个token可以保存在多个仓库)
 
 ![image-20201123204745882](https://gitee.com/wangzhebufangqi/PictureBed/raw/master/image-20201123204745882.png)
 
@@ -22,7 +22,7 @@
 
 ❗请按提示修改下述文件中的邮箱
 
-此文件为Github Actions执行的脚本，请确认目录为`.github\workflows`。
+此文件为Github Actions执行的脚本，请确认其所在的目录为`.github\workflows`。
 
 **若无其他需求，可只修改邮箱。**
 
@@ -82,11 +82,16 @@ jobs:
 
 以下信息无需修改。
 
-可参考`.\Part II`以及`.\Part III\UpdateLog`
+可参考[.\Part II](https://wangzhebufangqi.github.io/auto-export-gitbook/PART%20II/)以及[.\Part III\UpdateLog](https://wangzhebufangqi.github.io/auto-export-gitbook/PART%20III/UpdateLog.html)
 
 ```json
 {
 	"title": "Summary",
+    "links": {
+        "sidebar": {
+            "Home": "https://wangzhebufangqi.github.io"
+        }
+    },
 	"plugins" : [
 		"expandable-chapters",
 		"copy-code-button",
@@ -118,7 +123,7 @@ jobs:
 
 ### 确认目录结构等符合规范
 
-请参考`.\Part III\Attention.md`
+请参考[.\Part III\Attention](https://wangzhebufangqi.github.io/auto-export-gitbook/PART%20III/Attention.html)
 
 ### 进行push
 
@@ -132,4 +137,60 @@ git branch -M main
 git remote add origin https://github.com/wangzhebufangqi/auto-export-gitbook.git
 git push -u origin main
 ```
+
+以后的提交保证在main分支上更新即可
+
+```bash
+git add .
+git commit -m "update"
+git push
+```
+
+# 结果
+
+请确认按上述流程操作而无错漏之处。
+
+假设输入为：
+
+```
+auto-export-gitbook
+│  book.json
+│  README.md
+│
+├─.github
+│  └─workflows
+│          auto-generate-gitbook.yml
+│
+├─PART I
+│  │  README.md
+│  │
+│  ├─SubPart I
+│  │      Markdown.md
+│  │      PicGo.md
+│  │      README.md
+│  │      Typora.md
+│  │
+│  └─SubPart II
+│          Git.md
+│          Github.md
+│          README.md
+│
+├─PART II
+│      Plugins I.md
+│      Plugins II.md
+│      README.md
+│
+└─PART III
+        Attention.md
+        README.md
+        UpdateLog.md
+```
+
+push后等待两分钟左右，即可在网址`<username>.github.io/<repository>`查看生成的gitbook。
+
+这里的示例是https://wangzhebufangqi.github.io/auto-export-gitbook/
+
+![image-20201123213004208](https://gitee.com/wangzhebufangqi/PictureBed/raw/master/image-20201123213004208.png)
+
+# 更多信息
 
